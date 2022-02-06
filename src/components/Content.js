@@ -16,6 +16,7 @@ const Content = props => {
     >
       {props.icon}
       <Text
+        color="white"
         pl={['0px', '0px', '12px', '12px']}
         pt={['28px', '28px', '0px', '0px']}
         flex="1"

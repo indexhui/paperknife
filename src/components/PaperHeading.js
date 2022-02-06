@@ -7,7 +7,7 @@ const PaperHeading = props => {
   const Heading3size = { base: '22px', md: '22px', lg: '22px', xl: '22px' };
   if (as === 'h1') {
     return (
-      <Heading {...props} fontSize={Heading1size}>
+      <Heading color="white" fontSize={Heading1size} {...props}>
         {props.children}
       </Heading>
     );

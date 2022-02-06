@@ -24,6 +24,12 @@ export const MainButton = props => {
           bgGradient="linear(260deg, #186DD1 0%, #3DB9FF 56%)"
           _hover={{ bgGradient: 'linear(260deg, #3DB9FF  38%, #186DD1  100%)' }}
           color="black"
+          _focus={{
+            outline: 'none',
+          }}
+          _active={{
+            bgGradient: 'linear(260deg, #3DB9FF  38%, #186DD1  100%)',
+          }}
           {...props}
         >
           {props.children}
@@ -47,6 +53,9 @@ export const MainButton = props => {
         _hover={{
           bgGradient: 'linear(260deg, brand.700  0%, brand.600  100%)',
         }}
+        _active={{
+          bgGradient: 'linear(260deg, brand.700  0%, brand.600  100%)',
+        }}
         {...props}
       >
         {props.children}
@@ -67,6 +76,7 @@ export const MainButton = props => {
         border="4px solid black"
         letterSpacing="1px"
         _hover={{ bg: 'black', color: 'white' }}
+        _active={{ bg: 'black', color: 'white' }}
         {...props}
       >
         {props.children}
@@ -80,6 +90,7 @@ export const MainButton = props => {
       py="26px"
       bgGradient="linear(260deg, #186DD1 0%, #3DB9FF 56%)"
       _hover={{ bgGradient: 'linear(260deg, #3DB9FF  38%, #186DD1  100%)' }}
+      _active={{ bgGradient: 'linear(260deg, #3DB9FF  38%, #186DD1  100%)' }}
       {...props}
     >
       {props.children}
