@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#XMLID_3_);}
+	.st1{fill:#AF489B;}
+	.st2{fill:url(#XMLID_4_);}
+</style>
+<g id="XMLID_2_">
+	
+		<linearGradient id="XMLID_3_" gradientUnits="userSpaceOnUse" x1="-96.2376" y1="774.8556" x2="508.021" y2="54.8109" gradientTransform="matrix(1 0 0 -1 0 1026)">
+		<stop offset="0" style="stop-color:#EE4B96"></stop>
+		<stop offset="1" style="stop-color:#8B5BA6"></stop>
+	</linearGradient>
+	<polygon id="XMLID_18_" class="st0" points="971.1,974.7 971.1,976.1 52,976.1 52,48.4 742.4,744.5  "></polygon>
+	<polygon id="XMLID_20_" class="st1" points="971.1,973.2 971.1,974.7 742.4,744.5 771.3,714.2  "></polygon>
+	
+		<linearGradient id="XMLID_4_" gradientUnits="userSpaceOnUse" x1="855.0681" y1="128.8884" x2="1007.0373" y2="631.8342" gradientTransform="matrix(1 0 0 -1 0 1026)">
+		<stop offset="0" style="stop-color:#EE4B96"></stop>
+		<stop offset="1" style="stop-color:#8B5BA6"></stop>
+	</linearGradient>
+	<polygon id="XMLID_13_" class="st2" points="971.1,513 971.1,973.2 771.3,714.2  "></polygon>
+</g>
+</svg>

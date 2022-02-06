@@ -7,33 +7,51 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+
+import theme from './theme/theme.js';
+
+import Header from './layout/Header';
+import SectionHero from './layout/SectionHero';
+import SectionIntroduction from './layout/SectionIntroduction';
+import SectionFeatures from './layout/SectionFeatures';
+import SectionCommunities from './layout/SectionCommunities';
+import SectionProcess from './layout/SectionProcess';
+import SectionQuestions from './layout/SectionQuestions';
+import SectionCallToAction from './layout/SectionCallToAction';
+import SectionLastCallToAction from './layout/SectionLastCallToAction';
+import Footer from './layout/Footer';
+
 import { Logo } from './Logo';
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider resetCSS theme={theme}>
+      <Header />
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+        <VStack
+          // spacing={8}
+          w="100%"
+          bgSize="contain"
+          bgPosition="top left"
+          // bg="red"
+          bgGradient="radial(at top left, #186DD180 0%, #3DB9FF00 46% )"
+        >
+          <VStack w="100%">
+            <SectionHero />
+            <SectionIntroduction />
+            <SectionFeatures />
+            <SectionCommunities />
+            <SectionProcess />
           </VStack>
-        </Grid>
+        </VStack>
+        <VStack>
+          <SectionCallToAction />
+          <SectionQuestions />
+          <SectionLastCallToAction />
+        </VStack>
+        <Footer />
       </Box>
     </ChakraProvider>
   );
