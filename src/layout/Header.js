@@ -49,7 +49,7 @@ const Header = () => {
         position="fixed"
         top="0"
         backdropFilter="blur(0px)"
-        zIndex="1"
+        zIndex="4"
         bg="#070707BF"
         align="center"
         justify="center"

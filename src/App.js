@@ -13,6 +13,7 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 import theme from './theme/theme.js';
 
 import Header from './layout/Header';
+import ScrollUp from './components/ScrollUp';
 import SectionHero from './layout/SectionHero';
 import SectionIntroduction from './layout/SectionIntroduction';
 import SectionFeatures from './layout/SectionFeatures';
@@ -29,6 +30,7 @@ function App() {
   return (
     <ChakraProvider resetCSS theme={theme}>
       <Header />
+      <ScrollUp />
       <Box textAlign="center" fontSize="xl">
         <VStack
           // spacing={8}
