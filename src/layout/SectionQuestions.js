@@ -6,6 +6,7 @@ import {
   AccordionButton,
   AccordionPanel,
   Flex,
+  Box,
   Icon,
   Text,
   Image,
@@ -17,6 +18,8 @@ import PaperHeading from '../components/PaperHeading';
 import PaperText from '../components/PaperText';
 
 import picUsermainpage from '../assets/images/pic_usermainpage.png';
+
+import dots from '../assets/images/Dots-blue.svg';
 
 const space = {
   base: '100%',
@@ -67,7 +70,25 @@ const SectionQuestions = () => {
   const transform = `rotateX(${rotateDegree.x}deg) rotateY(${rotateDegree.y}deg)`;
 
   return (
-    <Flex py="100px" px="30px" onMouseMove={handleMouseMove}>
+    <Flex
+      py="100px"
+      px="30px"
+      w="100%"
+      position="relative"
+      justify="center"
+      onMouseMove={handleMouseMove}
+      bgGradient="radial(at center right,#186DD180 0%, #00000000 58% )"
+    >
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        w="100%"
+        h="100%"
+        bgImage={`url('${dots}')`}
+        bgPosition="top right"
+        bgRepeat="no-repeat"
+      ></Box>
       <Flex w={space} wrap="wrap">
         <Flex w="100%">
           <PaperHeading as="h2" pb="20px">
