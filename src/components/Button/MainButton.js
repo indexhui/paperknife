@@ -2,8 +2,6 @@ import { Button, Box, Icon } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
 import { RiDiscordFill } from 'react-icons/ri';
 
-// import { ArrowForwardIcon } from '@chakra-ui/icons';
-
 export const MainButton = props => {
   if (props.outline) {
     return (

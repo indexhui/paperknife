@@ -1,6 +1,8 @@
 import { extendTheme } from '@chakra-ui/react';
 
 const customTheme = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
   fonts: {
     heading: "'Montserrat', Sans-serif",
     body: "'Montserrat', Sans-serif",

@@ -29,6 +29,8 @@ const Footer = () => {
           </Text>
           <IconButton
             colorScheme="gray"
+            color="white"
+            bg="gray.800"
             aria-label="twitter"
             size="sm"
             icon={<Icon as={FaTwitter} />}

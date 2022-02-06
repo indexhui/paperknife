@@ -17,6 +17,7 @@ const PaperHeading = props => {
       <Heading
         as="h2"
         fontSize={Heading2size}
+        color="white"
         fontWeight="800"
         lineHeight={['1.2em', '1.2em', '1', '1']}
         {...props}
@@ -29,6 +30,7 @@ const PaperHeading = props => {
     return (
       <Heading
         as="h3"
+        color="white"
         fontSize={Heading3size}
         fontWeight="800"
         lineHeight={['1.2em', '1.2em', '1', '1']}

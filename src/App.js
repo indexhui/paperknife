@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { ChakraProvider, Box, VStack } from '@chakra-ui/react';
 
 import theme from './theme/theme.js';
 
@@ -23,8 +14,6 @@ import SectionQuestions from './layout/SectionQuestions';
 import SectionCallToAction from './layout/SectionCallToAction';
 import SectionLastCallToAction from './layout/SectionLastCallToAction';
 import Footer from './layout/Footer';
-
-import { Logo } from './Logo';
 
 function App() {
   return (
