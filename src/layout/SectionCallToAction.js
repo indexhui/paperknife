@@ -18,7 +18,12 @@ const delayTransition = { duration: 0.5, type: 'tween', delay: '.05' };
 
 const SectionCallToAction = () => {
   return (
-    <Flex pt={{ base: '10px', lg: '50px' }} pb={{ base: '40px', lg: '80px' }}>
+    <Flex
+      pt={{ base: '10px', lg: '50px' }}
+      pb={{ base: '40px', lg: '80px' }}
+      w="100%"
+      justify="center"
+    >
       <Flex direction="column">
         <MotionBox
           initial="hidden"
