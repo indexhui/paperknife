@@ -66,7 +66,7 @@ const SectionLastCallToAction = () => {
             <Text
               color="black"
               fontWeight="bold"
-              fontSize="16px"
+              fontSize={{ base: '14px', lg: '16px' }}
               letterSpacing="1.5px"
               textAlign="left"
               mb="20px"

@@ -62,7 +62,7 @@ const Header = () => {
           opacity: 0.1,
         }}
       >
-        <Flex w={space} justify="space-between">
+        <Flex w={space} justify="space-between" align="center">
           <Image src={logo} h="50px" />
           <SmallButton />
         </Flex>

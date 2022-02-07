@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChakraProvider, Box, VStack } from '@chakra-ui/react';
-
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/800.css';
 import theme from './theme/theme.js';
 
 import Header from './layout/Header';

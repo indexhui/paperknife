@@ -8,6 +8,8 @@ export const SmallButton = props => {
     <MotionButton
       color="white"
       rounded="full"
+      fontSize={{ base: '12px', lg: '14px' }}
+      py={{ base: '2px', lg: '10px' }}
       whileHover={{
         y: '-10px',
         transition: { duration: 0.1, type: 'tween' },
