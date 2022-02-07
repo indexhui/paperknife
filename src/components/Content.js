@@ -1,4 +1,4 @@
-import { Flex, Text, GridItem } from '@chakra-ui/react';
+import { Text, GridItem } from '@chakra-ui/react';
 
 const Content = props => {
   return (

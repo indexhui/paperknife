@@ -1,4 +1,4 @@
-import { Flex, Box, Image } from '@chakra-ui/react';
+import { Flex, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import metaMask from '../assets/images/metaMask.png';
@@ -9,8 +9,6 @@ import automic from '../assets/images/Automic.svg';
 import coinomi from '../assets/images/coinomi.svg';
 import kleer from '../assets/images/kleer.svg';
 import argent from '../assets/images/logo_argent.svg';
-
-const MotionBox = motion(Box);
 
 const MotionImage = motion(Image);
 

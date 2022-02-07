@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Flex, Grid, Icon } from '@chakra-ui/react';
+import { Grid, Icon } from '@chakra-ui/react';
 import Content from '../components/Content';
 import {
   FaPalette,
