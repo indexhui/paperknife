@@ -36,11 +36,9 @@ function App() {
             <SectionProcess />
           </VStack>
         </VStack>
-        <VStack>
-          <SectionCallToAction />
-          <SectionQuestions />
-          <SectionLastCallToAction />
-        </VStack>
+        <SectionCallToAction />
+        <SectionQuestions />
+        <SectionLastCallToAction />
         <Footer />
       </Box>
     </ChakraProvider>

@@ -47,7 +47,7 @@ const ScrollUp = () => {
       }}
     >
       <Flex align="center" justify="center" rounded="md">
-        <Icon as={FiChevronUp} w="28px" h="28px" />
+        <Icon color="white" as={FiChevronUp} w="28px" h="28px" />
       </Flex>
     </Button>
   );
