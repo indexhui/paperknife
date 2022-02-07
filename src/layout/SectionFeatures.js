@@ -54,6 +54,7 @@ const SectionFeatures = () => {
       direction="column"
       py="100px"
       px="30px"
+      overflow="hidden"
       onMouseMove={handleMouseMove}
       style={{ perspective: '1200px' }}
     >
@@ -96,7 +97,7 @@ const SectionFeatures = () => {
             position="absolute"
             w="100%"
             h="100%"
-            top={['8%', '20%', '20%', '20%']}
+            top={['8%', '8%', '20%', '20%']}
             right={['-35px', '-25px', '-5px', '-5px']}
             align="center"
             justify="center"

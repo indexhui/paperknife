@@ -52,7 +52,7 @@ const SectionProcess = () => {
         justify="center"
         direction="column"
         py="80px"
-        px="30px"
+        px={['20px', '20px', '30px', '30px']}
         rounded="xl"
         bgGradient="linear(to-b, #0C1828, #13161A47  )"
       >

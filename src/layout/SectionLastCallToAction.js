@@ -24,7 +24,7 @@ const SectionLastCallToAction = () => {
   return (
     <Flex
       direction="column"
-      pt={['80px', '100px', '180px', '160px']}
+      pt={['40px', '40px', '180px', '160px']}
       pb={['40px', '60px', '80px', '100px']}
       px="30px"
       position="relative"
@@ -56,6 +56,7 @@ const SectionLastCallToAction = () => {
           py="10px"
         >
           <MotionBox
+            w="100%"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 'all' }}
@@ -80,18 +81,24 @@ const SectionLastCallToAction = () => {
             variants={variants}
             transition={delayTransition}
           >
-            <PaperHeading as="h1" color="black" textAlign="left">
+            <PaperHeading
+              as="h1"
+              color="black"
+              textAlign="left"
+              fontSize={['54px', '54px', '68px', '78px']}
+            >
               NFT gate for membership and exclusive content
             </PaperHeading>
           </MotionBox>
           <Flex
+            mt="30px"
             w="100%"
             direction={['column', 'column', 'row', 'row']}
             align={['flex-start', 'flex-start', 'center', 'center']}
             justify="flex-start"
           >
             <MotionBox
-              my={['5px', '5px', '36px', '36px']}
+              my={['30px', '30px', '36px', '36px']}
               px="5px"
               initial="hidden"
               whileInView="visible"

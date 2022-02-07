@@ -22,11 +22,9 @@ function App() {
       <ScrollUp />
       <Box textAlign="center" fontSize="xl">
         <VStack
-          // spacing={8}
           w="100%"
           bgSize="contain"
           bgPosition="top left"
-          // bg="red"
           bgGradient="radial(at top left, #186DD180 0%, #3DB9FF00 46% )"
         >
           <VStack w="100%">
