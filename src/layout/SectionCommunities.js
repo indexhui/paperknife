@@ -1,14 +1,21 @@
 import { useState } from 'react';
 
 import { Grid, GridItem, Flex, Image } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 import ContentGroup from '../components/ContentGroup';
-import LogosAnimation from '../components/LogosAnimation';
 import Heading from '../components/PaperHeading';
 import Text from '../components/PaperText';
 
 import picDiscordConnect from '../assets/images/pic_connect-wallet-1911x1080.png';
 import picWalletconnect from '../assets/images/pic_userwallet.png';
+
+const MotionGridItem = motion(GridItem);
+const variants = {
+  visible: { opacity: 1, scale: 1, y: 0 },
+  hidden: { opacity: 0, scale: 1, y: 20 },
+};
+const delayTransition = { duration: 0.5, type: 'tween', delay: '.05' };
 
 const space = { base: '100%', md: '100%', lg: '90%', xl: '1180px' };
 
@@ -50,16 +57,20 @@ const SectionCommunities = () => {
         templateRows="repeat(7, 1fr)"
         templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)' }}
       >
-        <GridItem
+        <MotionGridItem
           rowSpan={2}
           colSpan={3}
           colStart={['auto', 'auto', '4', '4']}
-          // mr="50px"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
         >
           <Heading as="h2" textAlign="left">
             Different Tokens, different communities!
           </Heading>
-        </GridItem>
+        </MotionGridItem>
         <GridItem
           rowSpan={7}
           colSpan={3}
@@ -94,11 +105,20 @@ const SectionCommunities = () => {
             </Flex>
           </Flex>
         </GridItem>
-        <GridItem rowSpan={1} colSpan={3} mr={['0', '0', '0', '0']}>
+        <MotionGridItem
+          rowSpan={1}
+          colSpan={3}
+          mr={['0', '0', '0', '0']}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
+        >
           <Text textAlign="left" pt="20px">
             We help member bring communities together in different ways.
           </Text>
-        </GridItem>
+        </MotionGridItem>
 
         <GridItem
           rowSpan={4}

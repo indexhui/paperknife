@@ -26,10 +26,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.scroll({
-      top: 5,
-      behavior: 'smooth',
-    });
+    if (window.pageYOffset === 0) {
+      window.scroll({
+        top: 5,
+        behavior: 'smooth',
+      });
+    }
   }, []);
 
   useEffect(() => {
@@ -64,7 +66,6 @@ const Header = () => {
           <Image src={logo} h="50px" />
           <SmallButton />
         </Flex>
-        {/* {scrollPosition} */}
       </MotionFlex>
     );
   }

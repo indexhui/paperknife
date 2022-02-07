@@ -12,6 +12,8 @@ import {
   Image,
 } from '@chakra-ui/react';
 
+import { motion } from 'framer-motion';
+
 import { FaCaretRight, FaCaretUp } from 'react-icons/fa';
 
 import PaperHeading from '../components/PaperHeading';
@@ -20,6 +22,13 @@ import PaperText from '../components/PaperText';
 import picUsermainpage from '../assets/images/pic_usermainpage.png';
 
 import dots from '../assets/images/Dots-blue.svg';
+
+const MotionFlex = motion(Flex);
+const variants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 20 },
+};
+const delayTransition = { duration: 0.5, type: 'tween', delay: '.05' };
 
 const space = {
   base: '100%',
@@ -80,6 +89,7 @@ const SectionQuestions = () => {
       bgGradient="radial(at center right,#186DD180 0%, #00000000 58% )"
     >
       <Box
+        zIndex="-1"
         position="absolute"
         top="0"
         left="0"
@@ -90,11 +100,19 @@ const SectionQuestions = () => {
         bgRepeat="no-repeat"
       ></Box>
       <Flex w={space} wrap="wrap">
-        <Flex w="100%">
+        <MotionFlex
+          w="100%"
+          align="flex-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
+        >
           <PaperHeading as="h2" pb="20px">
             Questions
           </PaperHeading>
-        </Flex>
+        </MotionFlex>
         <Flex w={{ base: '100%', lg: '50%' }} pt="60px" pb="30px">
           <Accordion defaultIndex={[0]} allowMultiple w="100%">
             {questionLists.map((question, index) => (

@@ -37,7 +37,7 @@ const ScrollUp = () => {
       h="50px"
       bg="black"
       opacity=".5"
-      onClick={scrollToTop}
+      onClick={() => scrollToTop()}
       _hover={{
         opacity: 1,
         bg: 'black',

@@ -31,7 +31,7 @@ const SectionIntroduction = () => {
           mb={['40px', '40px', '30px', '30px']}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 'all' }}
+          viewport={{ once: true, amount: 'all' }}
           variants={variants}
           transition={delayTransition}
         >

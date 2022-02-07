@@ -1,19 +1,24 @@
-import { useState } from 'react';
-import { Flex, HStack, Text, Box, Image } from '@chakra-ui/react';
+import { Flex, Text, Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import PaperHeading from '../components/PaperHeading';
 
 import { MainButton } from '../components/Button/MainButton';
-import Hover3DTransform from '../components/Hover3DTransform';
-import dots from '../assets/images/Dots-blue.svg';
-import paperKnife from '../assets/images/pic_center_paperknife.png';
 
 import overlay from '../assets/images/overlay-3.jpg';
 
 const space = { base: '100%', md: '100%', lg: '90%', xl: '1180px' };
 
 const MotionBox = motion(Box);
+const variants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+const bottomVariants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 20 },
+};
+const delayTransition = { duration: 0.5, type: 'tween', delay: '.05' };
 
 const SectionLastCallToAction = () => {
   return (
@@ -50,13 +55,12 @@ const SectionLastCallToAction = () => {
           align={{ base: 'center', lg: 'flex-start' }}
           py="10px"
         >
-          <motion.div
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.75, type: 'tween' }}
-            style={{
-              y: '-18px',
-              opacity: 0.1,
-            }}
+          <MotionBox
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 'all' }}
+            variants={variants}
+            transition={delayTransition}
           >
             <Text
               color="black"
@@ -68,18 +72,18 @@ const SectionLastCallToAction = () => {
             >
               SAAS FOR NFT OWNERSHIP VERIFICATION
             </Text>
-          </motion.div>
-          <motion.div
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.75, type: 'tween' }}
-            style={{
-              opacity: 0.1,
-            }}
+          </MotionBox>
+          <MotionBox
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 'all' }}
+            variants={variants}
+            transition={delayTransition}
           >
             <PaperHeading as="h1" color="black" textAlign="left">
               NFT gate for membership and exclusive content
             </PaperHeading>
-          </motion.div>
+          </MotionBox>
           <Flex
             w="100%"
             direction={['column', 'column', 'row', 'row']}
@@ -89,24 +93,22 @@ const SectionLastCallToAction = () => {
             <MotionBox
               my={['5px', '5px', '36px', '36px']}
               px="5px"
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, type: 'tween' }}
-              style={{
-                y: '20px',
-                opacity: 0.1,
-              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 'all' }}
+              variants={bottomVariants}
+              transition={delayTransition}
             >
               <MainButton arrow="true">GET EARLY ACCESS</MainButton>
             </MotionBox>
             <MotionBox
               my="5px"
               px="5px"
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.75, type: 'tween' }}
-              style={{
-                y: '20px',
-                opacity: 0.1,
-              }}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 'all' }}
+              variants={bottomVariants}
+              transition={delayTransition}
             >
               <MainButton discord="true" bg="white" bgImage="">
                 JOIN OUR DISCORD

@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Flex, HStack, Text, Box, Image } from '@chakra-ui/react';
+import { Flex, Text, Box, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import PaperHeading from '../components/PaperHeading';
 
 import { MainButton } from '../components/Button/MainButton';
-import Hover3DTransform from '../components/Hover3DTransform';
+
 import dots from '../assets/images/Dots-blue.svg';
 import paperKnife from '../assets/images/pic_center_paperknife.png';
 
@@ -16,12 +16,9 @@ const MotionBox = motion(Box);
 const SectionHero = () => {
   const [relativePosition, setRelativePosition] = useState({ x: 0, y: 0 });
   const [dotRotation, setDotRotation] = useState({ x: 0, y: 0 });
-  // const [counter, setCounter] = useState(0);
 
   function handleMouseMove(event) {
     const bounds = event.currentTarget.getBoundingClientRect();
-
-    // setCounter(counter => counter + 1);
     setDotRotation({
       x: (
         (Math.floor(event.clientX - bounds.left - bounds.width / 2) /
@@ -163,7 +160,6 @@ const SectionHero = () => {
           style={{ perspective: '1200px' }}
           transform="rotate(3deg) "
         >
-          {/* <Hover3DTransform /> */}
           <Flex w="70%" transform={transformPhone}>
             <Image src={paperKnife} maxW="100%" />
           </Flex>

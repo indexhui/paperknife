@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Grid, GridItem, Flex, Image } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 import Card from '../components/Card';
 import LogosAnimation from '../components/LogosAnimation';
@@ -10,6 +11,18 @@ import Text from '../components/PaperText';
 import picDiscordConnect from '../assets/images/pic_discord_connect.png';
 import picWalletconnect from '../assets/images/pic_walletconnect.png';
 
+const MotionGridItem = motion(GridItem);
+const variants = {
+  visible: { opacity: 1, scale: 1, y: 0 },
+  hidden: { opacity: 0, scale: 1, y: 20 },
+};
+
+const imageVariants = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+const delayTransition = { duration: 0.5, type: 'tween', delay: '.05' };
 const space = { base: '100%', md: '100%', lg: '90%', xl: '1180px' };
 
 const SectionFeatures = () => {
@@ -50,12 +63,30 @@ const SectionFeatures = () => {
         templateRows="repeat(9, 1fr)"
         templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)' }}
       >
-        <GridItem rowSpan={2} colSpan={3} mr="50px">
+        <MotionGridItem
+          rowSpan={2}
+          colSpan={3}
+          mr="50px"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
+        >
           <Heading as="h2" textAlign="left">
             Let NFT be the key to unlock exclusive content
           </Heading>
-        </GridItem>
-        <GridItem rowSpan={8} colSpan={3} position="relative">
+        </MotionGridItem>
+        <MotionGridItem
+          rowSpan={8}
+          colSpan={3}
+          position="relative"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={imageVariants}
+          transition={delayTransition}
+        >
           <Image
             mt="12%"
             w={['150px', '150px', '150px', '240px']}
@@ -80,14 +111,23 @@ const SectionFeatures = () => {
               />
             </Flex>
           </Flex>
-        </GridItem>
-        <GridItem rowSpan={2} colSpan={3} mr={['0', '0', '40px', '50px']}>
+        </MotionGridItem>
+        <MotionGridItem
+          rowSpan={2}
+          colSpan={3}
+          mr={['0', '0', '40px', '50px']}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
+        >
           <Text textAlign="left" pt="20px">
             Take NFT as an identity token to check the eligibility for the
             access. Paperknife help you to provide membership, exclusive content
             or offline event pass
           </Text>
-        </GridItem>
+        </MotionGridItem>
 
         <GridItem
           rowSpan={5}

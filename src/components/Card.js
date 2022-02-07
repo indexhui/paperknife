@@ -24,7 +24,7 @@ const Card = props => {
       px={['40px', '40px', '50px', '50px']}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 'all' }}
+      viewport={{ once: true, amount: 'all' }}
       variants={variants}
       transition={delayTransition}
     >

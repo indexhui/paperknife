@@ -77,14 +77,13 @@ const LogosAnimation = () => {
           <MotionImage
             src={item.src}
             alt={item.alt}
-            // key={item.alt}
             custom={index % 4}
             w="60px"
             h="60px"
             objectFit="contain"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 'all' }}
+            viewport={{ once: true, amount: 'all' }}
             variants={variants}
           />
         </Flex>

@@ -1,9 +1,17 @@
-import { Flex, Icon, Divider } from '@chakra-ui/react';
+import { Flex, Box, Icon } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import Heading from '../components/PaperHeading';
 import Text from '../components/PaperText';
 import { FaLink, FaPen, FaUserAlt, FaLaugh } from 'react-icons/fa';
 
 import dots from '../assets/images/Dots-blue.svg';
+
+const MotionBox = motion(Box);
+const variants = {
+  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 20 },
+};
+const delayTransition = { duration: 0.5, type: 'tween', delay: '.05' };
 
 const space = { base: '100%', md: '100%', lg: '90%', xl: '1180px' };
 
@@ -48,12 +56,29 @@ const SectionProcess = () => {
         rounded="xl"
         bgGradient="linear(to-b, #0C1828, #13161A47  )"
       >
-        <Heading as="h2" pb="20px">
-          How it works
-        </Heading>
-        <Text>
-          From upload to share, you can easily build up a website with NFT gate.
-        </Text>
+        <MotionBox
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
+        >
+          <Heading as="h2" pb="20px">
+            How it works
+          </Heading>
+        </MotionBox>
+        <MotionBox
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 'all' }}
+          variants={variants}
+          transition={delayTransition}
+        >
+          <Text>
+            From upload to share, you can easily build up a website with NFT
+            gate.
+          </Text>
+        </MotionBox>
         <Flex w="100%" pt="80px" direction={['column', 'column', 'row', 'row']}>
           {steps.map((step, index) => (
             <Flex
@@ -79,9 +104,6 @@ const SectionProcess = () => {
                   '1px dashed rgba(255,255,255,0.2)',
                 ]
               }
-              // borderStyle="dashed"
-              // borderColor="red"
-              // borderColor={index !== 0 ? 'rgba(255,255,255,0.3)' : 'red'}
             >
               <Flex
                 border="4px"
